@@ -19,6 +19,7 @@ public class FacePamphlet extends ConsoleProgram
 	JButton add = new JButton("Add");
 	JButton delete = new JButton("Delete");
 	JButton lookup = new JButton("Lookup");
+	JTextField statusTxtField = new JTextField(TEXT_FIELD_SIZE);
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -34,12 +35,13 @@ public class FacePamphlet extends ConsoleProgram
     private void addInteractors() {
 		JLabel nameLabel = new JLabel ("Name");
 		
-		
 		add(nameLabel,NORTH);
 		add(nameTxtField, NORTH);
 		add(add,NORTH);
 		add(delete,NORTH);
 		add(lookup,NORTH);
+		
+		add(statusTxtField,WEST);
 	}
 
 
