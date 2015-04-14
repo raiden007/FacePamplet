@@ -76,23 +76,31 @@ public class FacePamphlet extends ConsoleProgram
      * to respond to these actions.
      */
     public void actionPerformed(ActionEvent e) {
+    	// Add button
 		if (e.getSource() == add) {
+			// If text field is empty return an error
 			if (nameTxtField.getText().equals("")) {
 				println ("Name Empty");
 			} else {
+				// If the profile is not in the database, add it.
 				if (database.containsProfile(nameTxtField.getText()) == false) {
 					profile = new FacePamphletProfile(nameTxtField.getText());
 					database.addProfile(profile);
 					println (profile.getName() + " was added!");
+					// Else error profile already exists
 				} else {
 					println ("Profile already exists: " + profile.toString());
 				}
 			}
 		} else if (e.getSource() == delete) {
+			// If text field is empty return an error
 			if (nameTxtField.getText().equals("")) {
 				println ("Name Empty");
 			} else {
-				
+				// If the profile is not in database return an error
+				if (database.containsProfile(nameTxtField.getText()) == false) {
+					println("Profile " + profile.getName() + " was not found!");
+				}
 			println ("Delete: " + nameTxtField.getText());
 			}
 		} else if (e.getSource() == lookup) {
