@@ -81,6 +81,7 @@ public class FacePamphlet extends ConsoleProgram
 			if (nameTxtField.getText().equals("")) {
 				println ("Name Empty");
 			} else {
+				println(username);
 				if (database.containsProfile(username) == false) {
 					profile = new FacePamphletProfile(username);
 					database.addProfile(profile);
