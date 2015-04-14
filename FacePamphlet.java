@@ -51,6 +51,7 @@ public class FacePamphlet extends ConsoleProgram
 		add(emptyLabel,WEST);
 		add(pictureTxtField,WEST);
 		add(changePicture,WEST);
+		add(emptyLabel,WEST);
 		add(addFiendTxtField,WEST);
 	}
 
