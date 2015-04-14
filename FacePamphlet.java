@@ -60,7 +60,7 @@ public class FacePamphlet extends ConsoleProgram
 		} else if (e.getSource() == lookup) {
 			println ("Lookup: " + nameTxtField.getText());
 		} else if (e.getSource() == changeStatus) {
-			println ("Change Status " + statusTxtField.getText());
+			println ("Change Status: " + statusTxtField.getText());
 		}
 	}
 
