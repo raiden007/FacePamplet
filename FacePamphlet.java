@@ -76,6 +76,9 @@ public class FacePamphlet extends ConsoleProgram
      * to respond to these actions.
      */
     public void actionPerformed(ActionEvent e) {
+    	
+    	profile = new FacePamphletProfile(nameTxtField.getText());
+    	
     	// Add button
 		if (e.getSource() == add) {
 			// If text field is empty return an error
@@ -84,7 +87,7 @@ public class FacePamphlet extends ConsoleProgram
 			} else {
 				// If the profile is not in the database, add it.
 				if (database.containsProfile(nameTxtField.getText()) == false) {
-					profile = new FacePamphletProfile(nameTxtField.getText());
+//					profile = new FacePamphletProfile(nameTxtField.getText());
 					database.addProfile(profile);
 					println (profile.getName() + " was added!");
 					// Else error profile already exists
@@ -99,7 +102,7 @@ public class FacePamphlet extends ConsoleProgram
 			} else {
 				// If the profile is not in database return an error
 				if (database.containsProfile(nameTxtField.getText()) == false) {
-					profile = new FacePamphletProfile(nameTxtField.getText());
+//					profile = new FacePamphletProfile(nameTxtField.getText());
 					println("Profile " + profile.getName() + " was not found!");
 				// If it is in database remove it
 				} else {
