@@ -40,7 +40,7 @@ public class FacePamphlet extends ConsoleProgram
 	public void init() {
 		addInteractors();
 		addActionListeners();
-		profile = new FacePamphletProfile(nameTxtField.getText());
+
     }
     
   
@@ -84,7 +84,7 @@ public class FacePamphlet extends ConsoleProgram
 			} else {
 				// If the profile is not in the database, add it.
 				if (database.containsProfile(nameTxtField.getText()) == false) {
-//					profile = new FacePamphletProfile(nameTxtField.getText());
+					profile = new FacePamphletProfile(nameTxtField.getText());
 					database.addProfile(profile);
 					println (profile.getName() + " was added!");
 					// Else error profile already exists
