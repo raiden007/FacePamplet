@@ -136,8 +136,10 @@ public class FacePamphlet extends ConsoleProgram
 			} else {
 				if (currentProfile == null) {
 					println ("No profile selected");
+				} else {
+					profile.setStatus(statusTxtField.getText());
+					println (profile.toString());
 				}
-			println ("Change Status: " + statusTxtField.getText());
 			}
 		} else if (e.getSource() == changePicture || e.getSource() == pictureTxtField) {
 			if (pictureTxtField.getText().equals("")) {
