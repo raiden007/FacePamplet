@@ -142,10 +142,22 @@ public class FacePamphlet extends ConsoleProgram
 				}
 			}
 		} else if (e.getSource() == changePicture || e.getSource() == pictureTxtField) {
+			// If text field is empty return an error
 			if (pictureTxtField.getText().equals("")) {
 				println ("Picture Empty");
 			} else {
-			println ("Change Picture: " + pictureTxtField.getText());
+				if (currentProfile == null) {
+					println ("No profile selected");
+				} else {
+					GImage image = null;
+			        try {
+			            image = new GImage(pictureTxtField.getText());
+			        } catch (ErrorException ex) {
+			        	// Code that is executed if the filename cannot be opened.
+			        }
+			       profile.setImage(image);
+			       println ("Image updated");
+				}
 			}
 		} else if (e.getSource() == addFriend || e.getSource() == addFriendTxtField) {
 			if (addFriendTxtField.getText().equals("")) {
