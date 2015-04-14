@@ -11,8 +11,11 @@ import acm.util.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// TODO: Remember to remove the Console after testing
 public class FacePamphlet extends ConsoleProgram 
 					implements FacePamphletConstants {
+	
+	JTextField nameTxtField = new JTextField(TEXT_FIELD_SIZE);
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -25,11 +28,11 @@ public class FacePamphlet extends ConsoleProgram
     
   
     private void addInteractors() {
-		JLabel name = new JLabel ("Name");
+		JLabel nameLabel = new JLabel ("Name");
 		
 		
-		add(name,NORTH);
-		
+		add(nameLabel,NORTH);
+		add(nameTxtField, NORTH);
 	}
 
 
