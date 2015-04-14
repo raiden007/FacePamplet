@@ -155,8 +155,12 @@ public class FacePamphlet extends ConsoleProgram
 			        } catch (ErrorException ex) {
 			        	// Code that is executed if the filename cannot be opened.
 			        }
+			       if (image == null) {
+			    	   println ("Image not found!");
+			       } else {
 			       profile.setImage(image);
 			       println ("Image updated");
+			       }
 				}
 			}
 		} else if (e.getSource() == addFriend || e.getSource() == addFriendTxtField) {
