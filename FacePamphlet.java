@@ -28,7 +28,7 @@ public class FacePamphlet extends ConsoleProgram
 
 	
 	FacePamphletDatabase database = new FacePamphletDatabase();
-	FacePamphletProfile profile = new FacePamphletProfile(username);
+	FacePamphletProfile profile = new FacePamphletProfile("");
 	
 
 
