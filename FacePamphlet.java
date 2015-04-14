@@ -12,7 +12,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-public class FacePamphlet extends Program 
+public class FacePamphlet extends ConsoleProgram 
 					implements FacePamphletConstants {
 	
 	JTextField nameTxtField = new JTextField(TEXT_FIELD_SIZE);
