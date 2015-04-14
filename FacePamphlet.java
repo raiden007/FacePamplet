@@ -95,7 +95,6 @@ public class FacePamphlet extends ConsoleProgram
 					println ("Profile already exists: " + profile.toString());
 				}
 			currentProfile = profile;
-			println("Current profile is :" + currentProfile.getName());
 			}
 		} else if (e.getSource() == delete) {
 			// If text field is empty return an error
@@ -125,7 +124,6 @@ public class FacePamphlet extends ConsoleProgram
 				} else {
 					println ("Lookup: " + profile.toString());
 					currentProfile = profile;
-					println("Current profile is :" + currentProfile.getName());
 				}
 
 			}
@@ -137,8 +135,8 @@ public class FacePamphlet extends ConsoleProgram
 				if (currentProfile == null) {
 					println ("No profile selected");
 				} else {
-					profile.setStatus(statusTxtField.getText());
-					println ("Status set to: " + profile.getStatus());
+					currentProfile.setStatus(statusTxtField.getText());
+					println ("Status set to: " + currentProfile.getStatus());
 				}
 			}
 		} else if (e.getSource() == changePicture || e.getSource() == pictureTxtField) {
@@ -158,7 +156,7 @@ public class FacePamphlet extends ConsoleProgram
 			       if (image == null) {
 			    	   println ("Image not found!");
 			       } else {
-			       profile.setImage(image);
+			    	   currentProfile.setImage(image);
 			       println ("Image updated");
 			       }
 				}
@@ -167,7 +165,7 @@ public class FacePamphlet extends ConsoleProgram
 			if (addFriendTxtField.getText().equals("")) {
 				println ("Add Friend Empty");
 			} else {
-				profile.addFriend(addFriendTxtField.getText());
+				currentProfile.addFriend(addFriendTxtField.getText());
 			println ("Add Friend: " + addFriendTxtField.getText());
 			}	
 		}
