@@ -56,6 +56,8 @@ public class FacePamphlet extends ConsoleProgram
 		add(emptyLabelTwo,WEST);
 		add(addFriendTxtField,WEST);
 		add(addFriend,WEST);
+		
+		statusTxtField.addActionListener(this);
 	}
 
 
