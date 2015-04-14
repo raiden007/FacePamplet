@@ -36,6 +36,7 @@ public class FacePamphlet extends ConsoleProgram
   
     private void addInteractors() {
 		JLabel nameLabel = new JLabel ("Name");
+		JLabel emptyLabel = new JLabel (EMPTY_LABEL_TEXT);
 		
 		add(nameLabel,NORTH);
 		add(nameTxtField, NORTH);
@@ -45,6 +46,7 @@ public class FacePamphlet extends ConsoleProgram
 		
 		add(statusTxtField,WEST);
 		add(changeStatus,WEST);
+		add(emptyLabel,WEST);
 		add(pictureTxtField,WEST);
 	}
 
