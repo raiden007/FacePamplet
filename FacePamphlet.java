@@ -120,12 +120,14 @@ public class FacePamphlet extends ConsoleProgram
 				// If profile does not exist show error
 				if (database.containsProfile(nameTxtField.getText()) == false) {
 					println ("Profile " + profile.getName() + " was not found!");
+					currentProfile = null;
 				// If profile exists show the profile information
 				} else {
 					println ("Lookup: " + profile.toString());
+					currentProfile = profile;
+					println("Current profile is :" + currentProfile.getName());
 				}
-			currentProfile = profile;
-			println("Current profile is :" + currentProfile.getName());
+
 			}
 		} else if (e.getSource() == changeStatus || e.getSource() == statusTxtField) {
 			if (statusTxtField.getText().equals("")) {
