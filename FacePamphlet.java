@@ -26,7 +26,6 @@ public class FacePamphlet extends ConsoleProgram
 	JTextField addFriendTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton addFriend = new JButton("Add Friend");
 
-	String username = nameTxtField.getText();
 	
 	FacePamphletDatabase database = new FacePamphletDatabase();
 	FacePamphletProfile profile = new FacePamphletProfile(username);
@@ -81,9 +80,9 @@ public class FacePamphlet extends ConsoleProgram
 			if (nameTxtField.getText().equals("")) {
 				println ("Name Empty");
 			} else {
-				println(username);
-				if (database.containsProfile(username) == false) {
-					profile = new FacePamphletProfile(username);
+				println(nameTxtField.getText());
+				if (database.containsProfile(nameTxtField.getText()) == false) {
+					profile = new FacePamphletProfile(nameTxtField.getText());
 					database.addProfile(profile);
 					println (profile.getName() + " was added!");
 				} else {
