@@ -40,7 +40,7 @@ public class FacePamphlet extends ConsoleProgram
 	public void init() {
 		addInteractors();
 		addActionListeners();
-
+		profile = new FacePamphletProfile(nameTxtField.getText());
     }
     
   
