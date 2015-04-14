@@ -16,6 +16,7 @@ public class FacePamphlet extends ConsoleProgram
 					implements FacePamphletConstants {
 	
 	JTextField nameTxtField = new JTextField(TEXT_FIELD_SIZE);
+	JButton add = new JButton("Add");
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -24,6 +25,7 @@ public class FacePamphlet extends ConsoleProgram
 	 */
 	public void init() {
 		addInteractors();
+		addActionListeners();
     }
     
   
@@ -33,6 +35,7 @@ public class FacePamphlet extends ConsoleProgram
 		
 		add(nameLabel,NORTH);
 		add(nameTxtField, NORTH);
+		add(add,NORTH);
 	}
 
 
@@ -42,7 +45,9 @@ public class FacePamphlet extends ConsoleProgram
      * to respond to these actions.
      */
     public void actionPerformed(ActionEvent e) {
-		// You fill this in as well as add any additional methods
+		if (e.getSource() == add) {
+			println ("Add: " + nameTxtField.getText());
+		}
 	}
 
 }
