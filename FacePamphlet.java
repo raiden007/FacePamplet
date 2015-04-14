@@ -99,6 +99,7 @@ public class FacePamphlet extends ConsoleProgram
 			} else {
 				// If the profile is not in database return an error
 				if (database.containsProfile(nameTxtField.getText()) == false) {
+					profile = new FacePamphletProfile(nameTxtField.getText());
 					println("Profile " + profile.getName() + " was not found!");
 				}
 			println ("Delete: " + nameTxtField.getText());
