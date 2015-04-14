@@ -170,6 +170,7 @@ public class FacePamphlet extends ConsoleProgram
 				} else {
 					if (database.containsProfile(addFriendTxtField.getText()) == true) {
 						currentProfile.addFriend(addFriendTxtField.getText());
+						println("Friend added!");
 						
 					} else {
 						println ("Friend profile not found!");
