@@ -23,7 +23,8 @@ public class FacePamphlet extends ConsoleProgram
 	JButton changeStatus = new JButton("Change Status");
 	JTextField pictureTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton changePicture = new JButton("Change Picture");
-	JTextField addFiendTxtField = new JTextField(TEXT_FIELD_SIZE);
+	JTextField addFriendTxtField = new JTextField(TEXT_FIELD_SIZE);
+	JButton addFriend = new JButton("Add Friend");
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -52,7 +53,8 @@ public class FacePamphlet extends ConsoleProgram
 		add(pictureTxtField,WEST);
 		add(changePicture,WEST);
 		add(emptyLabel,WEST);
-		add(addFiendTxtField,WEST);
+		add(addFriendTxtField,WEST);
+		add(addFriend,WEST);
 	}
 
 
@@ -72,6 +74,8 @@ public class FacePamphlet extends ConsoleProgram
 			println ("Change Status: " + statusTxtField.getText());
 		} else if (e.getSource() == changePicture) {
 			println ("Change Picture: " + pictureTxtField.getText());
+		} else if (e.getSource() == addFriend) {
+			println ("Add Friend: " + addFriendTxtField.getText());
 		}
 	}
 
