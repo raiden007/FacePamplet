@@ -110,9 +110,9 @@ public class FacePamphlet extends ConsoleProgram
 					database.deleteProfile(nameTxtField.getText());
 					println("Profile " + profile.getName() + " was deleted!");
 				}
+			currentProfile = null;
+			println("Current profile is :" + currentProfile.getName());
 			}
-		currentProfile = null;
-		println("Current profile is :" + currentProfile.getName());
 			// If text field is empty return an error
 		} else if (e.getSource() == lookup) {
 			if (nameTxtField.getText().equals("")) {
