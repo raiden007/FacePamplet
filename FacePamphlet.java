@@ -70,8 +70,11 @@ public class FacePamphlet extends ConsoleProgram
      */
     public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == add) {
-//			if (nameTxtField.getText() == null)
+			if (nameTxtField.getText() == "") {
+				println ("Empty");
+			} else {
 			println ("Add: " + nameTxtField.getText());
+			}
 		} else if (e.getSource() == delete) {
 			println ("Delete: " + nameTxtField.getText());
 		} else if (e.getSource() == lookup) {
