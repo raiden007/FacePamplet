@@ -22,6 +22,7 @@ public class FacePamphlet extends ConsoleProgram
 	JTextField statusTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton changeStatus = new JButton("Change Status");
 	JTextField pictureTxtField = new JTextField(TEXT_FIELD_SIZE);
+	JButton changePicture = new JButton("Change Picture");
 	JTextField addFiendTxtField = new JTextField(TEXT_FIELD_SIZE);
 
 	/**
@@ -49,6 +50,7 @@ public class FacePamphlet extends ConsoleProgram
 		add(changeStatus,WEST);
 		add(emptyLabel,WEST);
 		add(pictureTxtField,WEST);
+		add(changePicture,WEST);
 		add(addFiendTxtField,WEST);
 	}
 
@@ -67,6 +69,8 @@ public class FacePamphlet extends ConsoleProgram
 			println ("Lookup: " + nameTxtField.getText());
 		} else if (e.getSource() == changeStatus) {
 			println ("Change Status: " + statusTxtField.getText());
+		} else if (e.getSource() == changePicture) {
+			println ("Change Picture: " + pictureTxtField.getText());
 		}
 	}
 
