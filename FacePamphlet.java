@@ -20,11 +20,20 @@ public class FacePamphlet extends Program
 	 * initialization that needs to be performed.
 	 */
 	public void init() {
-		// You fill this in
+		addInteractors();
     }
     
   
-    /**
+    private void addInteractors() {
+		JLabel name = new JLabel ("Name");
+		
+		
+		add(name,NORTH);
+		
+	}
+
+
+	/**
      * This class is responsible for detecting when the buttons are
      * clicked or interactors are used, so you will have to add code
      * to respond to these actions.
