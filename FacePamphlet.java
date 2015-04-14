@@ -108,11 +108,16 @@ public class FacePamphlet extends ConsoleProgram
 					println("Profile " + profile.getName() + " was deleted!");
 				}
 			}
+			// If text field is empty return an error
 		} else if (e.getSource() == lookup) {
 			if (nameTxtField.getText().equals("")) {
 				println ("Name Empty");
 			} else {
-			println ("Lookup: " + nameTxtField.getText());
+				if (database.containsProfile(nameTxtField.getText()) == false) {
+					println ("Profile " + profile.getName() + " was not found!");
+				} else {
+					println ("Lookup: " + profile.toString());
+				}
 			}
 		} else if (e.getSource() == changeStatus || e.getSource() == statusTxtField) {
 			if (statusTxtField.getText().equals("")) {
