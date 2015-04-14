@@ -71,27 +71,39 @@ public class FacePamphlet extends ConsoleProgram
     public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == add) {
 			if (nameTxtField.getText().equals("")) {
-				println ("Empty");
+				println ("Name Empty");
 			} else {
 			println ("Add: " + nameTxtField.getText());
 			}
 		} else if (e.getSource() == delete) {
 			if (nameTxtField.getText().equals("")) {
-				println ("Empty");
+				println ("Name Empty");
 			} else {
 			println ("Delete: " + nameTxtField.getText());
 			}
 		} else if (e.getSource() == lookup) {
 			if (nameTxtField.getText().equals("")) {
-				println ("Empty");
+				println ("Name Empty");
 			} else {
 			println ("Lookup: " + nameTxtField.getText());
 			}
 		} else if (e.getSource() == changeStatus || e.getSource() == statusTxtField) {
+			if (statusTxtField.getText().equals("")) {
+				println ("Status Empty");
+			} else {
 			println ("Change Status: " + statusTxtField.getText());
+			}
 		} else if (e.getSource() == changePicture || e.getSource() == pictureTxtField) {
+			if (pictureTxtField.getText().equals("")) {
+				println ("Picture Empty");
+			} else {
 			println ("Change Picture: " + pictureTxtField.getText());
+			}
 		} else if (e.getSource() == addFriend || e.getSource() == addFriendTxtField) {
+			if (addFriendTxtField.getText().equals("")) {
+				println ("Add Friend Empty");
+			} else {
+		}
 			println ("Add Friend: " + addFriendTxtField.getText());
 		}
 	}
