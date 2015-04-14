@@ -92,6 +92,7 @@ public class FacePamphlet extends ConsoleProgram
 			if (nameTxtField.getText().equals("")) {
 				println ("Name Empty");
 			} else {
+				
 			println ("Delete: " + nameTxtField.getText());
 			}
 		} else if (e.getSource() == lookup) {
