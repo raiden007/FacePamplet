@@ -9,6 +9,8 @@
 import java.util.*;
 
 public class FacePamphletDatabase implements FacePamphletConstants {
+	
+	private Map <String, FacePamphletProfile> database = new HashMap <String, FacePamphletProfile>(); 
 
 	/** 
 	 * Constructor
@@ -27,7 +29,8 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 * the new profile passed in.
 	 */
 	public void addProfile(FacePamphletProfile profile) {
-		// You fill this in
+		String userName = profile.getName();
+		database.put(userName, profile);
 	}
 
 	
@@ -37,8 +40,11 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 * the given name, the method returns null.
 	 */
 	public FacePamphletProfile getProfile(String name) {
-		// You fill this in.  Currently always returns null.
+		if (database.containsKey(name) == true ) {
+			return database.get(name);
+		} else {
 		return null;
+		}
 	}
 	
 	
@@ -52,7 +58,10 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 * the database is unchanged after calling this method.
 	 */
 	public void deleteProfile(String name) {
-		// You fill this in
+		// TODO: An array with user's friends. Then iterate through them and remove each friend.
+		
+		database.remove(name);
+		
 	}
 
 	
@@ -62,7 +71,11 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 */
 	public boolean containsProfile(String name) {
 		// You fill this in.  Currently always returns false.
+		if (database.containsKey(name) == true) {
+			return true;
+		} else {
 		return false;
+		}
 	}
 
 }
