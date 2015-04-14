@@ -17,6 +17,7 @@ public class FacePamphlet extends ConsoleProgram
 	
 	JTextField nameTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton add = new JButton("Add");
+	JButton delete = new JButton("Delete");
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -36,6 +37,7 @@ public class FacePamphlet extends ConsoleProgram
 		add(nameLabel,NORTH);
 		add(nameTxtField, NORTH);
 		add(add,NORTH);
+		add(delete,NORTH);
 	}
 
 
@@ -47,6 +49,8 @@ public class FacePamphlet extends ConsoleProgram
     public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == add) {
 			println ("Add: " + nameTxtField.getText());
+		} else if (e.getSource() == delete) {
+			println ("Delete: " + nameTxtField.getText());
 		}
 	}
 
