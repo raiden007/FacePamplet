@@ -114,7 +114,6 @@ public class FacePamphletProfile implements FacePamphletConstants {
 	 * would return the string: "Alice (coding): Don, Chelsea, Bob"
 	 */ 
 	public String toString() {
-		// You fill this in.  Currently always returns the empty string.
 		String profile = Name + " (" + userStatus + "): ";
 		Iterator<String>it = friends.iterator();
 		while(it.hasNext()) {
