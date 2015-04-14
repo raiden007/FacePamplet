@@ -130,9 +130,13 @@ public class FacePamphlet extends ConsoleProgram
 
 			}
 		} else if (e.getSource() == changeStatus || e.getSource() == statusTxtField) {
+			// If text field is empty return an error
 			if (statusTxtField.getText().equals("")) {
 				println ("Status Empty");
 			} else {
+				if (currentProfile == null) {
+					println ("No profile selected");
+				}
 			println ("Change Status: " + statusTxtField.getText());
 			}
 		} else if (e.getSource() == changePicture || e.getSource() == pictureTxtField) {
