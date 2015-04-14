@@ -25,11 +25,13 @@ public class FacePamphlet extends ConsoleProgram
 	JButton changePicture = new JButton("Change Picture");
 	JTextField addFriendTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton addFriend = new JButton("Add Friend");
+
+	String username = nameTxtField.getText();
 	
 	FacePamphletDatabase database = new FacePamphletDatabase();
-	FacePamphletProfile profile = new FacePamphletProfile("");
+	FacePamphletProfile profile = new FacePamphletProfile(username);
 	
-	String username = nameTxtField.getText();
+
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -80,7 +82,6 @@ public class FacePamphlet extends ConsoleProgram
 				println ("Name Empty");
 			} else {
 				if (database.containsProfile(username) == false) {
-					profile = new FacePamphletProfile(nameTxtField.getText());
 					database.addProfile(profile);
 					println (profile.getName() + " was added!");
 				} else {
