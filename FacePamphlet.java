@@ -40,6 +40,7 @@ public class FacePamphlet extends ConsoleProgram
     private void addInteractors() {
 		JLabel nameLabel = new JLabel ("Name");
 		JLabel emptyLabel = new JLabel (EMPTY_LABEL_TEXT);
+		JLabel emptyLabelTwo = new JLabel (EMPTY_LABEL_TEXT);
 		
 		add(nameLabel,NORTH);
 		add(nameTxtField, NORTH);
@@ -52,7 +53,7 @@ public class FacePamphlet extends ConsoleProgram
 		add(emptyLabel,WEST);
 		add(pictureTxtField,WEST);
 		add(changePicture,WEST);
-		add(emptyLabel,WEST);
+		add(emptyLabelTwo,WEST);
 		add(addFriendTxtField,WEST);
 		add(addFriend,WEST);
 	}
