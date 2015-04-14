@@ -111,7 +111,6 @@ public class FacePamphlet extends ConsoleProgram
 					println("Profile " + profile.getName() + " was deleted!");
 				}
 			currentProfile = null;
-			println("Current profile is :" + currentProfile.getName());
 			}
 			// If text field is empty return an error
 		} else if (e.getSource() == lookup) {
@@ -125,6 +124,8 @@ public class FacePamphlet extends ConsoleProgram
 				} else {
 					println ("Lookup: " + profile.toString());
 				}
+			currentProfile = profile;
+			println("Current profile is :" + currentProfile.getName());
 			}
 		} else if (e.getSource() == changeStatus || e.getSource() == statusTxtField) {
 			if (statusTxtField.getText().equals("")) {
