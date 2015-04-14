@@ -159,7 +159,7 @@ public class FacePamphlet extends ConsoleProgram
 			    	   println ("Image not found!");
 			       } else {
 			       profile.setImage(image);
-			       println ("Image updated");
+			       println ("Image updated" + profile.getImage());
 			       }
 				}
 			}
