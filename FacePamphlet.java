@@ -30,6 +30,7 @@ public class FacePamphlet extends ConsoleProgram
 	FacePamphletDatabase database = new FacePamphletDatabase();
 	FacePamphletProfile profile = new FacePamphletProfile(nameTxtField.getText());
 	
+	FacePamphletProfile currentProfile = null;
 
 
 	/**
@@ -93,6 +94,8 @@ public class FacePamphlet extends ConsoleProgram
 				} else {
 					println ("Profile already exists: " + profile.toString());
 				}
+			currentProfile = profile;
+			println("Current profile is :" + currentProfile.getName());
 			}
 		} else if (e.getSource() == delete) {
 			// If text field is empty return an error
