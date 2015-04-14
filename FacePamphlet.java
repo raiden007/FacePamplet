@@ -20,6 +20,7 @@ public class FacePamphlet extends ConsoleProgram
 	JButton delete = new JButton("Delete");
 	JButton lookup = new JButton("Lookup");
 	JTextField statusTxtField = new JTextField(TEXT_FIELD_SIZE);
+	JButton changeStatus = new JButton("Change Status");
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -42,6 +43,7 @@ public class FacePamphlet extends ConsoleProgram
 		add(lookup,NORTH);
 		
 		add(statusTxtField,WEST);
+		add(changeStatus,WEST);
 	}
 
 
@@ -57,6 +59,8 @@ public class FacePamphlet extends ConsoleProgram
 			println ("Delete: " + nameTxtField.getText());
 		} else if (e.getSource() == lookup) {
 			println ("Lookup: " + nameTxtField.getText());
+		} else if (e.getSource() == changeStatus) {
+			println ("Change Status " + statusTxtField.getText());
 		}
 	}
 
