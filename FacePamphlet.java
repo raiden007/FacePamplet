@@ -11,7 +11,7 @@ import acm.util.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class FacePamphlet extends Program 
+public class FacePamphlet extends ConsoleProgram 
 					implements FacePamphletConstants {
 
 	/**
