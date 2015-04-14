@@ -70,7 +70,6 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 * that has the given name.  It returns false otherwise.
 	 */
 	public boolean containsProfile(String name) {
-		// You fill this in.  Currently always returns false.
 		if (database.containsKey(name) == true) {
 			return true;
 		} else {
