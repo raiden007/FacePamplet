@@ -21,6 +21,7 @@ public class FacePamphlet extends ConsoleProgram
 	JButton lookup = new JButton("Lookup");
 	JTextField statusTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton changeStatus = new JButton("Change Status");
+	JTextField pictureTxtField = new JTextField(TEXT_FIELD_SIZE);
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -44,6 +45,7 @@ public class FacePamphlet extends ConsoleProgram
 		
 		add(statusTxtField,WEST);
 		add(changeStatus,WEST);
+		add(pictureTxtField,WEST);
 	}
 
 
