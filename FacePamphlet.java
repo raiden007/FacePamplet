@@ -174,7 +174,6 @@ public class FacePamphlet extends ConsoleProgram
 						println ("Friend profile not found!");
 					}
 				}
-				currentProfile.addFriend(addFriendTxtField.getText());
 			println ("Add Friend: " + addFriendTxtField.getText());
 			}	
 		}
