@@ -22,6 +22,7 @@ public class FacePamphlet extends ConsoleProgram
 	JTextField statusTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton changeStatus = new JButton("Change Status");
 	JTextField pictureTxtField = new JTextField(TEXT_FIELD_SIZE);
+	JTextField addFiendTxtField = new JTextField(TEXT_FIELD_SIZE);
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -48,6 +49,7 @@ public class FacePamphlet extends ConsoleProgram
 		add(changeStatus,WEST);
 		add(emptyLabel,WEST);
 		add(pictureTxtField,WEST);
+		add(addFiendTxtField,WEST);
 	}
 
 
