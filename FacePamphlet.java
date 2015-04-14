@@ -28,7 +28,7 @@ public class FacePamphlet extends ConsoleProgram
 
 	
 	FacePamphletDatabase database = new FacePamphletDatabase();
-	FacePamphletProfile profile = new FacePamphletProfile("");
+	FacePamphletProfile profile = new FacePamphletProfile(nameTxtField.getText());
 	
 
 
@@ -84,7 +84,7 @@ public class FacePamphlet extends ConsoleProgram
 			} else {
 				// If the profile is not in the database, add it.
 				if (database.containsProfile(nameTxtField.getText()) == false) {
-					profile = new FacePamphletProfile(nameTxtField.getText());
+//					profile = new FacePamphletProfile(nameTxtField.getText());
 					database.addProfile(profile);
 					println (profile.getName() + " was added!");
 					// Else error profile already exists
@@ -99,10 +99,12 @@ public class FacePamphlet extends ConsoleProgram
 			} else {
 				// If the profile is not in database return an error
 				if (database.containsProfile(nameTxtField.getText()) == false) {
-					profile = new FacePamphletProfile(nameTxtField.getText());
+//					profile = new FacePamphletProfile(nameTxtField.getText());
 					println("Profile " + profile.getName() + " was not found!");
+				// If it is in database remove it
+				} else {
+					
 				}
-			println ("Delete: " + nameTxtField.getText());
 			}
 		} else if (e.getSource() == lookup) {
 			if (nameTxtField.getText().equals("")) {
