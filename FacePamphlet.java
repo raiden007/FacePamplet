@@ -11,8 +11,8 @@ import acm.util.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-// TODO: Remember to remove the Console after testing
-public class FacePamphlet extends ConsoleProgram 
+
+public class FacePamphlet extends Program 
 					implements FacePamphletConstants {
 	
 	JTextField nameTxtField = new JTextField(TEXT_FIELD_SIZE);
@@ -25,6 +25,8 @@ public class FacePamphlet extends ConsoleProgram
 	JButton changePicture = new JButton("Change Picture");
 	JTextField addFriendTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton addFriend = new JButton("Add Friend");
+	
+	FacePampletDatabase database = new FacePampletDatabase;
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -34,6 +36,7 @@ public class FacePamphlet extends ConsoleProgram
 	public void init() {
 		addInteractors();
 		addActionListeners();
+		FacePampletDatabase database = new FacePampletDatabase;
     }
     
   
