@@ -26,7 +26,10 @@ public class FacePamphlet extends Program
 	JTextField addFriendTxtField = new JTextField(TEXT_FIELD_SIZE);
 	JButton addFriend = new JButton("Add Friend");
 	
-	FacePampletDatabase database = new FacePampletDatabase;
+	FacePamphletDatabase database = new FacePamphletDatabase();
+	FacePamphletProfile profile = new FacePamphletProfile("");
+	
+	String username = nameTxtField.getText();
 
 	/**
 	 * This method has the responsibility for initializing the 
@@ -36,7 +39,7 @@ public class FacePamphlet extends Program
 	public void init() {
 		addInteractors();
 		addActionListeners();
-		FacePampletDatabase database = new FacePampletDatabase;
+
     }
     
   
@@ -76,7 +79,12 @@ public class FacePamphlet extends Program
 			if (nameTxtField.getText().equals("")) {
 				println ("Name Empty");
 			} else {
-			println ("Add: " + nameTxtField.getText());
+				if (database.containsProfile(username) == false) {
+					profile = new FacePamphletProfile(nameTxtField.getText());
+					database.addProfile(profile);
+				} else {
+					println ("Profile already exists: " + profile.toString());
+				}
 			}
 		} else if (e.getSource() == delete) {
 			if (nameTxtField.getText().equals("")) {
