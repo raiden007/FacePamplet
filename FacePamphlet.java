@@ -58,6 +58,8 @@ public class FacePamphlet extends ConsoleProgram
 		add(addFriend,WEST);
 		
 		statusTxtField.addActionListener(this);
+		pictureTxtField.addActionListener(this);
+		addFriendTxtField.addActionListener(this);
 	}
 
 
@@ -75,7 +77,7 @@ public class FacePamphlet extends ConsoleProgram
 			println ("Lookup: " + nameTxtField.getText());
 		} else if (e.getSource() == changeStatus || e.getSource() == statusTxtField) {
 			println ("Change Status: " + statusTxtField.getText());
-		} else if (e.getSource() == changePicture) {
+		} else if (e.getSource() == changePicture || e.getSource() == pictureTxtField) {
 			println ("Change Picture: " + pictureTxtField.getText());
 		} else if (e.getSource() == addFriend) {
 			println ("Add Friend: " + addFriendTxtField.getText());
