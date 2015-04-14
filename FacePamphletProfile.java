@@ -13,6 +13,9 @@ import java.util.*;
 
 public class FacePamphletProfile implements FacePamphletConstants {
 	
+	String name = "";
+	GImage Image = null;
+	
 	/** 
 	 * Constructor
 	 * This method takes care of any initialization needed for
@@ -25,7 +28,7 @@ public class FacePamphletProfile implements FacePamphletConstants {
 	/** This method returns the name associated with the profile. */ 
 	public String getName() {
 		// You fill this in.  Currently always returns the empty string.
-		return "";
+		return name;
 	}
 
 	/** 
@@ -39,7 +42,7 @@ public class FacePamphletProfile implements FacePamphletConstants {
 
 	/** This method sets the image associated with the profile. */ 
 	public void setImage(GImage image) {
-		// You fill this in
+		image = Image;
 	}
 	
 	/** 
