@@ -79,7 +79,7 @@ public class FacePamphlet extends ConsoleProgram
 			println ("Change Status: " + statusTxtField.getText());
 		} else if (e.getSource() == changePicture || e.getSource() == pictureTxtField) {
 			println ("Change Picture: " + pictureTxtField.getText());
-		} else if (e.getSource() == addFriend) {
+		} else if (e.getSource() == addFriend || e.getSource() == addFriendTxtField) {
 			println ("Add Friend: " + addFriendTxtField.getText());
 		}
 	}
