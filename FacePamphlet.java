@@ -113,8 +113,10 @@ public class FacePamphlet extends ConsoleProgram
 			if (nameTxtField.getText().equals("")) {
 				println ("Name Empty");
 			} else {
+				// If profile does not exist show error
 				if (database.containsProfile(nameTxtField.getText()) == false) {
 					println ("Profile " + profile.getName() + " was not found!");
+				// If profile exists show the profile information
 				} else {
 					println ("Lookup: " + profile.toString());
 				}
