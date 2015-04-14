@@ -103,8 +103,8 @@ public class FacePamphlet extends ConsoleProgram
 			if (addFriendTxtField.getText().equals("")) {
 				println ("Add Friend Empty");
 			} else {
-		}
 			println ("Add Friend: " + addFriendTxtField.getText());
+			}	
 		}
 	}
 
