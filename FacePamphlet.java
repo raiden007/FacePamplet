@@ -82,6 +82,7 @@ public class FacePamphlet extends ConsoleProgram
 				println ("Name Empty");
 			} else {
 				if (database.containsProfile(username) == false) {
+					profile = new FacePamphletProfile(username);
 					database.addProfile(profile);
 					println (profile.getName() + " was added!");
 				} else {
